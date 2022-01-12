@@ -1,0 +1,15 @@
+<div class="flip-container" onclick="flip(this);">
+	<div class="flipper">
+		<div class="front" style="background-image:url({ARTWORK});">
+		</div>
+		<div class="back" style="background:#404040;">
+			<div class="info_container">
+				<div class="info_rank">#{RANK}</div>
+				<div class="info_name"><a href="https://open.spotify.com/album/{URL}">{NAME}</a></div>
+				<div class="info_artist">{ARTIST}</div>
+				<div class="info_year">{YEAR}</div>
+				<button class="info_edit" onclick="edit({ID})">edit</button>
+			</div>
+		</div>
+	</div>
+</div>
