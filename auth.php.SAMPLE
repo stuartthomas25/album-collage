@@ -3,4 +3,7 @@ $servername = "localhost"
 $username = "myusername";
 $password = "mypassword";
 $dbname = "mydatabase";
+$spotify_id = "CLIENT_ID";
+$spotify_ = "CLIENT_SECRET";
+$spotify_redirect = "REDIRECT_URI";
 ?>

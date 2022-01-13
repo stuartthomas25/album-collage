@@ -9,10 +9,12 @@ error_reporting(E_ALL);
 
 require 'vendor/autoload.php';
 
+require 'auth.php';
+
 $session = new SpotifyWebAPI\Session(
-    '47d3780c8c9242b585d9b2e9fec240b5',
-    '4fffe285204a4d98a1bc674fcc9198d8',
-    'http://files.stuartthomas.us/albums/add_album.php'
+    $spotify_id,
+    $spotify_secret,
+    $spotify_redirect
 );
 
 if (isset($_GET['code'])) {
