@@ -14,7 +14,7 @@ require 'auth.php';
 $session = new SpotifyWebAPI\Session(
     $spotify_id,
     $spotify_secret,
-    $spotify_redirect
+    $home_url."add_album.php"
 );
 
 if (isset($_GET['code'])) {
