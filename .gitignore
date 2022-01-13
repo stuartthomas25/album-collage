@@ -1,3 +1,5 @@
 bkups/**
 auth.php
 images/**
+changelog.txt
+.gitignore
