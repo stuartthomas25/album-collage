@@ -25,11 +25,12 @@ if (!$result) {
     die("Result does not exist");
 } else {
     //entry already exists
-    $name = $result->fetch_assoc()['NAME'];
-    $artist= $result->fetch_assoc()['ARTIST'];
-    file_put_contents("changelog.txt", date("Y-m-d"). " > SHIFT $name ($artist) TO $rank \n", FILE_APPEND | LOCK_EX);
+    $info = $result->fetch_assoc();
+    $name = $info['NAME'];
+    $artist= $info['ARTIST'];
+    $old_rank = $info['RANK'];
+    file_put_contents("changelog.txt", date("Y-m-d"). " > SHIFT $name ($artist) FROM $old_rank TO $rank \n", FILE_APPEND | LOCK_EX);
     mysqli_report(MYSQLI_REPORT_ALL);
-    $old_rank = $result->fetch_assoc()['RANK'];
     if ($rank=="delete"){
         $delete_query = "delete from `albums` where `ID` = ".$id.";";
         $shift_query = "update `albums` 
