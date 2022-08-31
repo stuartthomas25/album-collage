@@ -2,6 +2,11 @@
 	<head>
 		<title>Stuart's Favorite Albums</title>
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <style type="text/css">
+        .info_edit {
+            display: none;
+        }
+        </style>
 		<script type='text/javascript'>
 			function flip(element) {
 				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -15,95 +20,7 @@
 				}
 			}
 		</script>
-		<style type='text/css'>
-			/* entire container, keeps perspective */
-			body{background-color:black;}
-			.flip-container {
-				perspective: 1000px;
-				display: inline-block;
-			}
-				/* flip the pane when hovered */
-			@media (hover: hover) {
-				.flip-container:hover .flipper {
-					transform: rotateY(180deg);
-				}
-			}	
-			
-			@media (hover: none) {
-				.flip-container-hover .flipper {
-					transform: rotateY(180deg);
-				}
-			}	
-
-			.flip-container, .front, .back {
-				width: 240px;
-				height: 240px;
-				background-position: 0 0;
-				background-size: cover;
-				background-repeat:no-repeat;
-			}
-
-			/* flip speed goes here */
-			.flipper {
-				transition: 0.6s;
-				transform-style: preserve-3d;
-
-				position: relative;
-			}
-
-			/* hide back of pane during swap */
-			.front, .back {
-				backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-moz-backface-visibility: hidden;
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-
-			/* front pane, placed above back */
-			.front {
-				z-index: 2;
-				/* for firefox 31 */
-				transform: rotateY(0deg);
-			}
-
-			/* back, initially hidden pane */
-			.back {
-				transform: rotateY(180deg);
-			}
-			
-			.info_container {
-				text-align: center;
-				font-family: 'Ubuntu', sans-serif;
-			}
-			.info_rank {
-				margin-top: 20%;
-				font-size: 21pt;
-				color: gainsboro;
-			}
-			.info_name {
-    			margin-top: 10;
-   				font-size: 16pt;
-   			}
-   			.info_name a {
-   				color: whitesmoke;
-   				text-decoration: none;
-			}
-			.info_artist {
-				margin-top: 5;
-				font-size: 12pt;
-				color: gainsboro;
-			}
-			.info_year {
-    			margin-top: 2;
-   				font-size: 13pt;
-    			color: gainsboro;
-			}
-			.info_edit {
-				display: none
-			}
-		</style>
+        <link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
 	
